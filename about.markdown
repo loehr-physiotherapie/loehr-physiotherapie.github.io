@@ -1,5 +1,6 @@
 ---
 layout: page
-title: About
+title: Team
 permalink: /about/
 ---
+
