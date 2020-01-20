@@ -4,4 +4,4 @@ title: Philosophie
 permalink: /philosophie/
 ---
 
-***Teste Bearbeitung\!\!***
+1. ***Teste Bearbeitung\!\!***
