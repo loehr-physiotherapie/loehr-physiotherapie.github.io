@@ -18,6 +18,8 @@ Klassische Massagetherapie
 
 Hausbesuche
 
+Kiefergelenkstherapie bei CMD
+
 Faszientherapie
 
 Triggerpunkttherapie
@@ -50,11 +52,21 @@ Dry needling Akupunktur
 
 Neuraltherapie
 
-Osteopathie
+Osteopathische Techniken
 
-Chirotherapie
+Chiropraktik
 
 Dorntherapie
+
+&nbsp;
+
+Ablauf der Behandlung
+
+&nbsp;
+
+Kosten&uuml;bernahme
+
+&nbsp;
 
 &nbsp;
 
