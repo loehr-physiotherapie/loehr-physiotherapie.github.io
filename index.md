@@ -2,9 +2,7 @@
 layout: default
 ---
 
-**Herzlich Willkommen **
-
-**Schön, dass Sie da sind**
+**Hallo und Herzlich Willkommen in unserer Praxis**
 
 &nbsp;
 
