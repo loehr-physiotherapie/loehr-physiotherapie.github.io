@@ -1,13 +1,19 @@
+@font-face {
+    font-family: 'loehrFont';
+    src: url('../fonts/moderat.otf');
+}
+
 body, html {
     margin: 0;
     padding: 0;
 
-    font: 1em "Open Sans",serif;
+    font: 'loehrFont', Fallback, sans-serif;
 }
 
 p {
     margin: 1em;
     padding: 1em;
+    font: 'loehrFont', Fallback, sans-serif;
 }
 
 .nav-main {
