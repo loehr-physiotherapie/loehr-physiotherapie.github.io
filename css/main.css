@@ -1,19 +1,26 @@
 @font-face {
-    font-family: 'loehrFont';
+    font-family: 'loehr-font';
     src: url('../fonts/moderat.otf');
 }
 
 @font-face {
-    font-family: 'loehrFont';
+    font-family: 'loehr-font';
     src: url('../fonts/moderat_bold.otf');
     font-weight: bold;
   }
 
-body, html {
+html {
     margin: 0;
     padding: 0;
+}
 
-    font: 'loehrFont', Fallback, sans-serif;
+body {
+    margin: 0;
+    padding: 0;
+    color: dimgray;
+    font-size: 21px;
+    font-family: 'loehr-font';
+    /* font-family: 'loehr-font', Fallback, sans-serif; */
 }
 
 p {
@@ -34,7 +41,6 @@ p {
     padding: 15px 30px;
     font-size: 3em;
     line-height: 40px;
-
 }
 
 .nav-main > ul {
