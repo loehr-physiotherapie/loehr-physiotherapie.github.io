@@ -19,12 +19,15 @@ body {
     padding: 0;
     color: dimgray;
     font-size: 21px;
-    font-family: 'loehr-font';
+    font-family: 'loehr-font', sans-serif;
     /* font-family: 'loehr-font', Fallback, sans-serif; */
 }
 
 p {
     margin: 1em;
+    line-height: 1.4;
+    font-style: normal;
+    text-align: left;
     /* padding: 1em; */
 }
 
