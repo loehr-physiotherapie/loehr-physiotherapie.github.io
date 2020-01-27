@@ -3,6 +3,12 @@
     src: url('../fonts/moderat.otf');
 }
 
+@font-face {
+    font-family: 'loehrFont';
+    src: url('../fonts/moderat_bold.otf');
+    font-weight: bold;
+  }
+
 body, html {
     margin: 0;
     padding: 0;
@@ -12,8 +18,7 @@ body, html {
 
 p {
     margin: 1em;
-    padding: 1em;
-    font: 'loehrFont', Fallback, sans-serif;
+    /* padding: 1em; */
 }
 
 .nav-main {
