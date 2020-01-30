@@ -6,16 +6,6 @@ permalink: /anwendungen/
 
 &nbsp;
 
-**Wellness und Massage**
-
-Klassische Massage
-
-Fu&szlig;reflexzonenmassage
-
-Sportmassage
-
-Gesichtslymphdrainage
-
 &nbsp;
 
 **Heilpraktiker&nbsp;**
