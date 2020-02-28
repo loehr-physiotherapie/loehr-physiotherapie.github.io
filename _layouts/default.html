@@ -10,11 +10,43 @@
             <!-- <h1>Loehr-Physiotherapie</h1> -->
             {% include nav.html %}
         </header>
-        <p>
+        <figure class="main-logo">
+            <img src="logo/Löhr_Signet_RGB_BLACK.png" alt="Logo" >
+            <figcaption>Irgendein Text</figcaption>
+        </figure>
+        <main>
             {{content}}
-        </p>
+        </main>
         <footer>
 
         </footer>
+
+        <script>
+
+            const mainLogo = document.querySelector(".main-logo");
+            const navLogo = document.querySelector(".nav-logo");
+
+            
+            observer = new IntersectionObserver((entries) => {
+                if(!entries[0].isIntersecting ) 
+                {   
+                    navLogo.style.display = "block"
+                    navLogo.classList.add("nav-logo");
+                    navLogo.classList.remove("nav-logo-hidden");
+                }
+                else
+                {
+                    navLogo.classList.add("nav-logo-hidden");
+                    navLogo.classList.remove("nav-logo");
+                    setTimeout(() => {  navLogo.style.display = "none"  }, 400);
+                    
+                }
+                // console.log(navLogo.style)
+            })
+            
+            observer.observe(mainLogo);
+
+        </script>
+
     </body>
 </html>

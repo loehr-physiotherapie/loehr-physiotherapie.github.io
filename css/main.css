@@ -7,7 +7,7 @@
     font-family: 'loehr-font';
     src: url('../fonts/moderat_bold.otf');
     font-weight: bold;
-  }
+  } 
 
 html {
     margin: 0;
@@ -17,102 +17,161 @@ html {
 body {
     margin: 0;
     padding: 0;
-    color: dimgray;
+    color: black;
     font-size: 21px;
     font-family: 'loehr-font', sans-serif;
-    /* font-family: 'loehr-font', Fallback, sans-serif; */
+}
+
+.main-logo {
+    text-align: center;
+}
+
+
+header{
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    flex-flow: column;
+    position: absolute; 
+    text-align: center;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav a {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    /* font-size: 1.2em; */
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+    padding: 10px;
+}
+
+.logo {
+    display: none;
+}
+
+nav a:hover {
+    color: black;
+    background-color: white;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 200ms ease-in-out 200ms;
+} 
+
+.menu:hover {
+    filter: opacity(50%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+main {
+    display: grid;
+    height: 2000px;
+    place-content: center;
 }
 
 p {
-    margin: 1em;
-    line-height: 1.4;
-    font-style: normal;
-    text-align: left;
-    /* padding: 1em; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
-.nav-main {
-    width: 100%;
-    height: 70px;
-    background-color: darkgray;
-    color: white;
-}
 
-.nav-main .logo {
-    float: left;
-    height: 40px;
-    padding: 15px 30px;
-    font-size: 3em;
-    line-height: 40px;
-}
+@media screen and (min-width: 800px) {
+    .menu {
+        display: none;
+    }
 
-.nav-main > ul {
-    margin: 0;
-    padding: 0;
-    float: left;
-    list-style-type: none;
-}
+    .nav-logo {
+        /* display: block; */
+        animation: anim-in 400ms ease-in-out;
+    }
 
-.nav-main > ul > li {
-    float: left;
-}
+    .nav-logo-hidden {
+        animation: anim-out 400ms ease-in-out;
+    }
 
-.nav-item {
-    display: inline-block;
-    padding: 15px 20px;
-    height: 40px;
-    line-height: 40px;
-    color: white;
-    text-decoration: none;
-}
+    @keyframes anim-out {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(0);
+        } 
+    }
 
-.nav-item:hover {
-    background-color: dimgrey;
-}
 
-.nav-item:focus {
-    background-color: dimgrey;
-}
+    @keyframes anim-in {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
 
-.nav-item:focus ~ .nav-content {
-    max-height: 400px;
-    transition: max-height 0.4s ease-in;
-    -webkit-transition: max-height 0.4s ease-in;
-    -moz-transition: max-height 0.4s ease-in;
-}
 
-.nav-content {
-    position: absolute;
-    top: 70px;
-    overflow: hidden;
-    background-color: darkgray;
-    max-height: 0;
-}
+    header {
+       display: grid; 
+       grid-template-columns: 1fr minmax(800px, 1fr) 1fr;
+    }
 
-.nav-content:active {
-    max-height: 400px;
- }
+    nav {
+        all: unset;
+        display: grid;
+        /* grid-template-columns: auto auto  auto auto; */
+        grid-column: 2/3;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        align-items: center;
+    }
 
-.nav-content a {
-    color: white;
-    text-decoration: none;
-}
+    nav a {
+        position: relative;
+        color: black;
+        opacity: 1;
+    }
 
-.nav-content a:hover {
-    background-color: dimgrey;
-}
+    nav a{
+        all:unset;
+    }
 
-.nav-sub {
-    padding: 20px;
-}
+    nav a::after {
+        content: "";
+        display: block;
+        height: 5px;
+        background: black;
+        position: absolut;
+        transform: scale(0,1);
+        transform-origin: left;
+        transition: transform ease-in-out 300ms;
+    }
 
-.nav-sub ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-}
+    nav a:hover::after {
+        transform: scale(1,1);
+    }
 
-.nav-sub ul li a {
-    display: inline-block;
-    padding: 5px 0;
 }
