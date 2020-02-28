@@ -10,11 +10,10 @@
             <!-- <h1>Loehr-Physiotherapie</h1> -->
             {% include nav.html %}
         </header>
-        <figure class="main-logo">
-            <img src="logo/Löhr_Signet_RGB_BLACK.png" alt="Logo" >
-            <figcaption>Irgendein Text</figcaption>
-        </figure>
         <main>
+            <section class="main-logo">
+                <img src="logo/Loehr_Signet_RGB_BLACK.png" alt="Logo" >
+            </section>
             {{content}}
         </main>
         <footer>
@@ -26,23 +25,27 @@
             const mainLogo = document.querySelector(".main-logo");
             const navLogo = document.querySelector(".nav-logo");
 
+            const config = 
+            {
+                threshold: "0.9"
+            };
             
             observer = new IntersectionObserver((entries) => {
-                if(!entries[0].isIntersecting ) 
+                console.log(entries)
+                if(! (entries[0].isIntersecting ))
                 {   
-                    navLogo.style.display = "block"
+                    mainLogo.style.opacity = 0.7;
                     navLogo.classList.add("nav-logo");
                     navLogo.classList.remove("nav-logo-hidden");
                 }
                 else
                 {
+                    mainLogo.style.opacity = 1;
                     navLogo.classList.add("nav-logo-hidden");
                     navLogo.classList.remove("nav-logo");
-                    setTimeout(() => {  navLogo.style.display = "none"  }, 400);
                     
                 }
-                // console.log(navLogo.style)
-            })
+            }, config)
             
             observer.observe(mainLogo);
 

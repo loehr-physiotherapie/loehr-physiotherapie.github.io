@@ -22,12 +22,9 @@ body {
     font-family: 'loehr-font', sans-serif;
 }
 
-.main-logo {
-    text-align: center;
-}
-
 
 header{
+    padding-top: 20px;
     position: fixed;
     text-align: center;
     width: 100%;
@@ -54,6 +51,14 @@ nav a {
     opacity: 0;
     transition: opacity 100ms ease-in-out;
     padding: 10px;
+}
+
+.nav-logo {
+    display: none;
+}
+
+.nav-logo-hidden {
+    display: none;
 }
 
 .logo {
@@ -86,17 +91,31 @@ nav a:hover {
     -webkit-user-select: none;
 }
 
-main {
-    display: grid;
-    height: 2000px;
-    place-content: center;
+
+.main-logo {
+    padding-top: 175px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
 }
+
+section{
+    padding: 100px 250px;
+}
+
 
 p {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 
@@ -106,19 +125,25 @@ p {
     }
 
     .nav-logo {
-        /* display: block; */
-        animation: anim-in 400ms ease-in-out;
+        display: flex;
+        flex: 1;
+        opacity: 1;
+        animation: anim-in 400ms ease-in;
     }
 
     .nav-logo-hidden {
-        animation: anim-out 400ms ease-in-out;
+        display: flex;
+        flex: .000001;
+        animation: anim-out 400ms ease-out;
     }
 
     @keyframes anim-out {
         0% {
+            opacity: 1;
             transform: scale(1);
         }
         100% {
+            opacity: 0;
             transform: scale(0);
         } 
     }
@@ -126,9 +151,11 @@ p {
 
     @keyframes anim-in {
         0% {
+            opacity: 0;
             transform: scale(0);
         }
         100% {
+            opacity: 1;
             transform: scale(1);
         }
     }
@@ -141,23 +168,26 @@ p {
 
     nav {
         all: unset;
-        display: grid;
-        /* grid-template-columns: auto auto  auto auto; */
         grid-column: 2/3;
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
         align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        overflow: hidden;
+
+
     }
 
     nav a {
-        position: relative;
+        all:unset;
+        /* position: relative; */
         color: black;
         opacity: 1;
+        flex:1;
+        overflow: hidden;
+        transition: flex 400ms;
     }
 
-    nav a{
-        all:unset;
-    }
 
     nav a::after {
         content: "";
