@@ -153,7 +153,7 @@ nav a:hover {
 
 
 
-@media(min-width: 500px) {
+@media(min-width: 1000px) {
     .menu {
         display: none;
     }
