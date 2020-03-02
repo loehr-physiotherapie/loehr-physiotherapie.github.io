@@ -12,6 +12,7 @@
 html {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -20,6 +21,30 @@ body {
     color: black;
     font-size: 21px;
     font-family: 'loehr-font', sans-serif;
+}
+
+
+section {
+    padding-top: 150px;
+    text-align: center;
+}
+
+
+img {
+    padding: 20px 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: auto;
+}
+
+p {
+    margin: 0px;
+    padding: 20px 0px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -91,35 +116,44 @@ nav a:hover {
     -webkit-user-select: none;
 }
 
+.contact {
+    display: none;
+}
+
 
 .main-logo {
-    padding-top: 175px;
-    max-width: 540px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     z-index: -1;
 }
 
-section{
-    padding: 100px 250px;
-}
-
-
-p {
-    display: block;
+.main-logo img {
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
 }
 
-img {
-    display: block;
+.main-logo h1 {
+    margin:0;
+    padding: 50px 0px;
+    text-align: center;
     width: 100%;
-    height: auto;
+}
+
+.main-logo a {
+    margin-top: 50px;
+    margin-bottom: 500px;
+    color: black;   
+    display: block;
+    text-align: center;
+
 }
 
 
-@media screen and (min-width: 800px) {
+
+
+@media(min-width: 700px) {
     .menu {
         display: none;
     }
@@ -188,6 +222,10 @@ img {
         transition: flex 400ms;
     }
 
+    nav a:hover {
+        cursor: pointer;
+        background-color: #f2f2f2;
+    }
 
     nav a::after {
         content: "";
@@ -203,5 +241,108 @@ img {
     nav a:hover::after {
         transform: scale(1,1);
     }
+
+    .contact {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: auto auto;
+        justify-content: center;
+    }
+    
+    .contact a {
+        color: black;
+    }
+
+    .contact label {
+        padding: 15px;
+    }
+
+    .contact label:hover {
+        cursor: pointer;
+        filter: opacity(50%);
+    }
+
+    .contact-content {
+        position: relative;
+        grid-row: 2;
+        grid-column: 1;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-content p {
+        margin: 0;
+        min-width: 500px;
+        position: absolute;
+    }
+
+    .phone-label {
+        user-select: none;
+        grid-column-start: 4;
+    }
+    .email-label {
+        user-select: none;
+    }
+
+    .phone-number {
+        display: none;
+    }
+
+    .email-address {
+        display: none;
+    }
+
+
+    .phone-toggle {
+        display: none;
+    }
+
+    .email-toggle {
+        display: none;
+    }
+
+    .phone-toggle:checked ~ .contact-content .phone-number {
+        display: block;
+    }
+
+    .phone-toggle:checked ~ .contact-content .email-address {
+        display: none;
+    }
+
+    .email-toggle:checked ~ .contact-content .email-address {
+        display: block;
+    }
+
+    .email-toggle:checked ~ .contact-content .phone-number {
+        display: none;
+    }
+
+    section {
+        min-height:700px;
+        display: grid;
+        grid-template-columns: 1fr, auto auto, 1fr;
+        grid-template-rows: auto auto;
+        justify-items: center;
+        align-items: center;
+    }
+
+
+    .main-logo {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .section-a h2{
+        grid-column: 2/4;
+    }
+    .section-a img{
+        grid-column: 2;
+    }
+
+
+
+
+
+
 
 }
