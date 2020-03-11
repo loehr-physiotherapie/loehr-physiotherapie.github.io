@@ -223,7 +223,15 @@ nav a:hover {
 
     nav a:hover {
         cursor: pointer;
+        background-color: white;
+    }
+
+    .nav-scroll {
         background-color: #f2f2f2;
+    }   
+
+    .nav-scroll a:hover {
+        background-color: #f2f2f2;  
     }
 
     nav a::after {
