@@ -72,6 +72,18 @@ nav a {
     padding: 10px;
 }
 
+section {
+    min-height:90vh;
+    display: grid;
+    padding-top: 100px;
+    justify-items: center;
+    align-items: center;
+}
+
+section h2 {
+    text-decoration: underline;
+}
+
 .nav-logo {
     display: none;
 }
@@ -311,14 +323,6 @@ nav a:hover {
 
     .email-toggle:checked ~ .contact-content .phone-number {
         display: none;
-    }
-
-    section {
-        min-height:90vh;
-        display: grid;
-        padding-top: 100px;
-        justify-items: center;
-        align-items: center;
     }
 
     .section-a h2{
