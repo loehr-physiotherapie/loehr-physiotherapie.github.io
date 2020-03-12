@@ -24,12 +24,6 @@ body {
 }
 
 
-/* section {
-    padding-top: 150px;
-    text-align: center;
-} */
-
-
 img {
     padding: 20px 0px;
     display: block;
@@ -319,19 +313,8 @@ nav a:hover {
         display: none;
     }
 
-<<<<<<< HEAD
-
-    .main-logo {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-    }
-
-    .section-a {
-        /* min-height:700px; */
-=======
     section {
         min-height:90vh;
->>>>>>> master
         display: grid;
         padding-top: 100px;
         justify-items: center;
