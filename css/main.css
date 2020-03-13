@@ -27,24 +27,6 @@ body {
 }
 
 
-img {
-    padding: 20px 0px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    height: auto;
-}
-
-p {
-    margin: 0px;
-    padding: 20px 0px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
 header{
     padding-top: 20px;
     position: fixed;
@@ -82,6 +64,10 @@ section {
     padding-top: 100px;
     justify-items: center;
     align-items: center;
+}
+
+img {
+    width: 100%;
 }
 
 .nav-logo {
@@ -152,6 +138,25 @@ nav a:hover {
     text-align: center;
 }
 
+.card img {
+    transition: all 0.3s ease 0s;
+}
+
+.card p {
+    position: absolute;
+    padding: 20px; 
+    opacity: 0;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+}
+
+.card:hover img {
+    opacity: 25%;
+}
+
+.card:hover p {
+    opacity: 1; 
+}
 
 
 @media(min-width: 1000px) {
@@ -378,34 +383,8 @@ nav a:hover {
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        transition: all 0.3s ease 0s;
+        /* transition: all 0.3s ease 0s; */
         position: relative;   
     }
-
-    .card img {
-        all: unset;
-        width: 100%;
-        transition: all 0.3s ease 0s;
-    }
-
-    .card p{
-        position: absolute; 
-        opacity: 0;
-        transition: all 0.3s ease 0s;
-    }
-
-    .card:hover img
-    {
-        opacity: 25%;
-    }
-
-    .card:hover p {
-        opacity: 1; 
-
-        
-    }
-
-
-
 
 }
