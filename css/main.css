@@ -50,6 +50,7 @@ header{
     position: fixed;
     text-align: center;
     width: 100%;
+    z-index: 999;
 }
 
 nav {

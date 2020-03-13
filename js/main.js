@@ -10,7 +10,8 @@ const config =
 
 observer = new IntersectionObserver((entries) => {
     console.log(entries)
-    if(! (entries[0].isIntersecting ))
+    // if(! (entries[0].isIntersecting ))
+    if(entries[0].intersectionRatio < 0.5)
     {   
         mainLogo.style.opacity = 0.5;
         navLogo.classList.add("nav-logo");
