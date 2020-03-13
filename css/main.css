@@ -34,6 +34,32 @@ header{
     z-index: 999;
 }
 
+footer {
+    display: grid;
+    grid-gap: 30px;
+    width: 100%;
+    height: 30vh; 
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(5, 1fr);
+    background-color:  #f2f2f2;
+    text-align: center;
+    align-items: center;
+}
+
+footer img {
+    grid-column: span 2;
+    grid-row: 2;
+}
+
+footer p {
+    grid-column: span 2;
+    grid-row: 3;
+}
+
+footer a {
+    grid-row: 4;
+}
+
 nav {
     display: flex;
     flex-flow: column;
