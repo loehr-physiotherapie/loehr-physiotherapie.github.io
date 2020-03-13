@@ -14,21 +14,16 @@
             {% include nav.html %}
         </header>
         <main>
-            <section class="main-logo">
-                <img src="logo/Loehr_Signet_RGB_BLACK.png" alt="Logo" >
-                <h1 class="main-logo-text editable">Löhr Physiotherapie</h1>
-                <a href="#praxis"><i class="material-icons" style="font-size:40px;">keyboard_arrow_down</i></a>
-            </section>
             {{content}}
         </main>
         <footer>
-            <img src="logo/Loehr_Signet_RGB_BLACK.png" alt="Logo" style="width:auto ;height:100px; margin-left: auto; margin-right: auto;">
+            <img src="{{site.baseurl}}/logo/Loehr_Signet_RGB_BLACK.png" alt="Logo" style="width:auto ;height:100px; margin-left: auto; margin-right: auto;">
             <p>© 2020 by Löhr-Physiotherapie</p>
             <a href="" style="justify-self: end;">Datenschutz</a>
             <a href="" style="justify-self: start;">Impressum</a>
         </footer>
 
-        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="{{site.baseurl}}/js/main.js"></script>
 
     </body>
 </html>
