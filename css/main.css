@@ -361,7 +361,7 @@ nav a:hover {
         grid-gap: 50px;
     }
 
-    h2{
+    h1, h2, h3, p, ul{
         grid-column: 2/span 12;
     }
 
