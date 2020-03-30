@@ -165,6 +165,7 @@ nav a:hover {
 }
 
 .main-logo .text {
+    padding: 5px;
     display: block;
     text-align: center;
 }
@@ -463,19 +464,25 @@ nav a:hover {
     .physiotherapie {
         grid-column: 2 / span 12;
         justify-items: center;
+        grid-gap: 0;
     }
 
     .physiotherapie h1{
         grid-column: 2 / span 12;
     }
 
-    .physiotherapie p {
+    .physiotherapie .content {
         grid-row: 2;
-        grid-column: 5 / span 3;
+        grid-column: 2/span 6;
     }
+
+    .physiotherapie .content ul {
+        padding-left: 50px;
+    }
+
     .physiotherapie ul {
         grid-row: 2;
-        grid-column: 8 / span 3;
+        grid-column: 7 / span 6;
     }
 
 
