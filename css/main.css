@@ -138,29 +138,60 @@ nav a:hover {
 
 
 .main-logo {
-    max-width: 700px;
+    padding-top: 100px;
+    min-height:  90vh;
+}
+
+.main-logo img{
+    display: block;
+    height: 40vh;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
 }
 
-.main-logo img {
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+.main-logo .title {
+    height: 40vh;
+    margin: auto;
+    width: 15%;
 }
 
 .main-logo h1 {
+    font-size: 150px;
+}
+
+.main-logo h2 {
+    font-size: 38px;
+}
+
+.main-logo .text {
+    display: block;
+    text-align: center;
+}
+
+/* .main-logo {
+    max-width: 700px;
+    
+} */
+
+/* .main-logo img {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+/* .main-logo h1 {
     margin:0;
     padding: 0;
     text-align: center;
     width: 100%;
-}
+} */
 
-.main-logo a {
+/* .main-logo a {
     color: black;   
     display: block;
     text-align: center;
-}
+} */
 
 .card img {
     transition: all 0.3s ease 0s;
@@ -365,21 +396,10 @@ nav a:hover {
         grid-column: 2/span 12;
     }
 
-    .main-logo {
-        grid-column: 2/span 12;
-    }
+    /* .main-logo h1 {
+        font-size: 100px;
+    } */
 
-    .main-logo img{
-        grid-column: 2/span 12;
-    }
-
-    .main-logo h1 {
-        grid-column: 2/span 12;
-    }
-
-    .main-logo a {
-        grid-column: 2/span 12;
-    }
 
     .section-a img{
         grid-column: 2/span 6;
