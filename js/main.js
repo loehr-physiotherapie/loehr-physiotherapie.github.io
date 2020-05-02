@@ -3,7 +3,7 @@ const firstSection = document.querySelector(".firstSection");
 const mainLogo = document.querySelector(".main-logo");
 const navLogo = document.querySelector(".nav-logo");
 
-const config = 
+const config =
 {
     // rootMargin: "-100000px 0px 0px 0px",
     threshold: "0.5"
@@ -12,15 +12,13 @@ const config =
 observer = new IntersectionObserver((entries) => {
     console.log(entries)
     // if(! (entries[0].isIntersecting ))
-    if(entries[0].intersectionRatio < 0.5)
-    {   
+    if (entries[0].intersectionRatio < 0.5) {
         firstSection.style.opacity = 0.5;
         navLogo.classList.add("nav-logo");
         navLogo.classList.remove("nav-logo-hidden");
         header.classList.add("nav-scroll")
     }
-    else
-    {
+    else {
         firstSection.style.opacity = 1;
         navLogo.classList.add("nav-logo-hidden");
         navLogo.classList.remove("nav-logo");
@@ -30,6 +28,6 @@ observer = new IntersectionObserver((entries) => {
 
 observer.observe(firstSection);
 
-$('.contact-check').on('change', function() {
-    $('.contact-check').not(this).prop('checked', false);  
+$('.contact-check').on('change', function () {
+    $('.contact-check').not(this).prop('checked', false);
 });
