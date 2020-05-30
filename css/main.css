@@ -1,3 +1,10 @@
+:root {
+    --loehr-anthrazit: #354b54;
+    --loehr-physio-geld: #fdd188;
+    --loeht-heiler-blau: #bed7e6;
+}
+
+
 @font-face {
     font-family: 'loehr-font';
     src: url('../fonts/moderat.otf');
@@ -13,7 +20,8 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    color: black;
+    /* color: black; */
+    color: var(--loehr-anthrazit);
     font-family: 'loehr-font', sans-serif;
 }
 
@@ -166,7 +174,7 @@ nav a:hover {
 }
 
 .main-logo .title {
-    height: 38vh;
+    height: 30vh;
     margin: auto;
     width: 300px;
 }
@@ -276,7 +284,7 @@ nav a:hover {
 
     nav a {
         all:unset;
-        color: black;
+        color: var(--loehr-anthrazit);
         opacity: 1;
         flex:1;
         overflow: hidden;
@@ -300,7 +308,7 @@ nav a:hover {
         content: "";
         display: block;
         height: 5px;
-        background: black;
+        background: var(--loehr-anthrazit);
         position: absolut;
         transform: scale(0,1);
         transform-origin: left;
@@ -438,7 +446,7 @@ nav a:hover {
         height: 100%;
         justify-content: center; 
         align-items: center;
-        background-image: url(../images/green-grass-field-during-sunset-1080722.jpg);
+        background-color: var(--loehr-physio-geld);
         /* background-color: black; */
         background-size: 100% 100%;
     }
@@ -446,7 +454,7 @@ nav a:hover {
     .top h2 {
         color: white;
         font-size: 50px;
-        border: solid 10px white;
+        /* border: solid 10px white; */
     }
 
     .bottom {
@@ -488,12 +496,39 @@ nav a:hover {
         grid-column: 8 / span 5;
     }
 
-
-    .map iframe{
-        grid-column: 2/span 12;
-        width: 100%;
-        height: 50vh;
+    .map {
+        grid-column: 2/ span 12;
+        background-color: var(--loehr-physio-geld);
     }
+
+    .map .heading {
+        grid-column: 2/ span 12;
+        width: 100%; 
+        text-align: center;
+    }
+
+    .map .karte{
+        grid-column: 2/ span 6;
+        width: 100%;
+        height: 100%;
+        
+    }
+    
+    .karte iframe {
+        width: 100%;
+        height: 42vh;
+        border: none
+    }
+
+    .map .text {
+        grid-column: 9/ span 5;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* .map div {
+        /* padding-top: 50%; */
+    /* } */ 
 
     .datenschutz {  
         all: unset;
