@@ -1,0 +1,352 @@
+:root {
+    --loehr-anthrazit: #354b54;
+    --loehr-physio-geld: #fdd188;
+    --loeht-heiler-blau: #bed7e6;
+}
+
+
+@font-face {
+    font-family: 'loehr-font';
+    src: url('../fonts/moderat.otf');
+}
+
+@font-face {
+    font-family: 'loehr-font';
+    src: url('../fonts/moderat_bold.otf');
+    font-weight: bold;
+  }
+
+
+/***********/
+/* General */
+/***********/
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: var(--loehr-anthrazit);
+    font-family: 'loehr-font', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 21px;
+    width: 100%;
+}
+
+header{
+    padding-top: 20px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 999;
+}
+
+nav {
+    display: flex;
+    flex-flow: column;
+    position: absolute; 
+    text-align: center;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav a {
+    color: white;
+    background-color: var(--loehr-anthrazit);
+    /* font-size: 1.2em; */
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: black;
+    background-color: white;
+}
+
+section {
+    min-height:91vh;
+    display: grid;
+    padding-top: 78px;
+    justify-items: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+h1, h2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+} 
+
+p {
+    padding: 0 10px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* height: 15vh;  */
+    background-color:  #f2f2f2;
+    text-align: center;
+    align-items: center;
+}
+
+footer img {
+    grid-column: span 2;
+    grid-row: 2;
+}
+
+footer p {
+    grid-column: span 2;
+    grid-row: 3;
+}
+
+footer a {
+    grid-row: 4;
+}
+
+
+/*******/
+/* Nav */
+/*******/
+
+.contact {
+    display: none;
+}
+
+.nav-logo {
+    display: none;
+}
+
+.nav-logo-hidden {
+    display: none;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.logo {
+    display: none;
+}
+
+.menu:hover {
+    filter: opacity(50%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 200ms ease-in-out 200ms;
+} 
+
+
+
+/****************/
+/* Landing Page */
+/****************/
+
+
+.main-logo {
+    padding-top: 100px;
+    min-height:  90vh;
+}
+
+.main-logo img{
+    all: unset;
+    display: block;
+    height: 40vh;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-logo .title {
+    height: 30vh;
+    margin: auto;
+    width: 300px;
+}
+
+.main-logo h1 {
+    width: unset;
+    height: unset;
+    margin-left: -5px;
+    font-size: 150px;
+    line-height: 0.8em;
+}
+
+.main-logo h2 {
+    /* all:unset; */
+    width: unset;
+    height: unset;
+    font-size: 45px;
+}
+
+.main-logo .text {
+    display: block;
+    text-align: center;
+}
+
+.main-logo .text *{
+    margin-top: 20px;
+}
+
+
+/*********/
+/* Cards */
+/*********/
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;   
+}
+
+.card img {
+    transition: all 0.3s ease 0s;
+    text-align: center;
+}
+
+.card:hover img {
+    opacity: 25%;
+}
+
+.card p {
+    transition: all 0.3s ease 0s;
+    position: absolute;
+    padding: 20px;
+    opacity: 0;
+}
+
+.card:hover p {
+    opacity: 1; 
+}
+
+
+/***************/
+/* Anwendungen */
+/***************/
+.anwendungen h2 {
+    background-color: var(--loehr-physio-geld);
+}
+.anwendungen div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.anwendungen div h3 {
+    color: white;
+}
+
+.anwendungen div a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--loehr-anthrazit);
+    /* border: solid 5px white; */
+}
+
+.anwendungen div a:hover {
+    opacity: 50%;
+}
+
+
+.physiotherapie h1 {
+    padding: 50px 0;
+}
+
+
+/***********/
+/* Kontakt */
+/***********/
+.map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.map .karte{
+    padding-top: 10px ;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.map .karte iframe {
+    width: 100%;
+    height: 50vh;
+}
+
+.map .text {
+    padding: 20px 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/***************/
+/* Datenschutz */
+/**************/
+.datenschutz {
+    /* all:unset; */
+    display: block;
+    width: 100%;
+}
+
+.datenschutz * {
+    /* text-align: center; */
+    /* color: unset; */
+    list-style-position: inside;
+    /* padding: 10px; */
+}   
+
+.datenschutz h1 {
+    /* color: black; */
+    padding-bottom: 2em;
+    padding-top: 2em;
+    text-align: unset;
+}
+
+.datenschutz h4 {
+    padding-top: 3em;
+    padding-left: 10px;
+}
+
+.datenschutz h4:before {
+    content: counter(h4counter) ".\0000a0\0000a0";
+    counter-increment: h4counter;
+}
+
+.datenschutz p {
+    padding-top: 1em;
+}
+

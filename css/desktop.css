@@ -4,235 +4,7 @@
     --loeht-heiler-blau: #bed7e6;
 }
 
-
-@font-face {
-    font-family: 'loehr-font';
-    src: url('../fonts/moderat.otf');
-}
-
-@font-face {
-    font-family: 'loehr-font';
-    src: url('../fonts/moderat_bold.otf');
-    font-weight: bold;
-  } 
-
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    /* color: black; */
-    color: var(--loehr-anthrazit);
-    font-family: 'loehr-font', sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    /* margin: 10px; */
-    font-size: 21px;
-    width: 100%;
-}
-
-
-header{
-    padding-top: 20px;
-    position: fixed;
-    text-align: center;
-    width: 100%;
-    z-index: 999;
-}
-
-footer {
-    display: grid;
-    grid-gap: 30px;
-    width: 100%;
-    height: 30vh; 
-    grid-template-columns: auto auto;
-    grid-template-rows: repeat(5, 1fr);
-    background-color:  #f2f2f2;
-    text-align: center;
-    align-items: center;
-}
-
-footer img {
-    grid-column: span 2;
-    grid-row: 2;
-}
-
-footer p {
-    grid-column: span 2;
-    grid-row: 3;
-}
-
-footer a {
-    grid-row: 4;
-}
-
-nav {
-    display: flex;
-    flex-flow: column;
-    position: absolute; 
-    text-align: center;
-    width: 100%;
-    top: 100%;
-    left: 0;
-    transform: scale(1,0);
-    transform-origin: top;
-    transition: transform 400ms ease-in-out;
-}
-
-nav a {
-    color: white;
-    background-color: var(--loehr-anthrazit);
-    /* font-size: 1.2em; */
-    opacity: 0;
-    transition: opacity 100ms ease-in-out;
-    padding: 10px;
-}
-
-section {
-    min-height:91vh;
-    display: grid;
-    padding-top: 78px;
-    justify-items: center;
-    align-items: center;
-}
-
-img {
-    width: 100%;
-}
-
-h2 {
-    padding-bottom: 100px;
-} 
-
-
-.nav-logo {
-    display: none;
-}
-
-.nav-logo-hidden {
-    display: none;
-}
-
-.logo {
-    display: none;
-}
-
-nav a:hover {
-    color: black;
-    background-color: white;
-}
-
-.nav-toggle {
-    display: none;
-}
-
-
-.nav-toggle:checked ~ nav {
-    transform: scale(1,1);
-}
-
-.nav-toggle:checked ~ nav a {
-    opacity: 1;
-    transition: opacity 200ms ease-in-out 200ms;
-} 
-
-.menu:hover {
-    filter: opacity(50%);
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-.contact {
-    display: none;
-}
-
-
-.main-logo {
-    padding-top: 100px;
-    min-height:  90vh;
-}
-
-.main-logo img{
-    display: block;
-    height: 40vh;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.main-logo .title {
-    height: 30vh;
-    margin: auto;
-    width: 300px;
-}
-
-.main-logo h1 {
-    margin-left: -5px;
-    font-size: 150px;
-    line-height: 0.8em;
-}
-
-.main-logo h2 {
-    font-size: 45px;
-}
-
-.main-logo .text {
-    display: block;
-    text-align: center;
-}
-
-.main-logo .text *{
-    margin-top: 20px;
-}
-
-
-.card img {
-    transition: all 0.3s ease 0s;
-}
-
-.card p {
-    position: absolute;
-    padding: 20px; 
-    opacity: 0;
-    text-align: center;
-    transition: all 0.3s ease 0s;
-}
-
-.card:hover img {
-    opacity: 25%;
-}
-
-.card:hover p {
-    opacity: 1; 
-}
-
-
-@media(min-width: 1000px) {
-    .menu {
-        display: none;
-    }
-
-    h2, img, section {
-        padding-bottom: 0;
-    }
-
-    .nav-logo {
-        display: flex;
-        flex: 1;
-        opacity: 1;
-        animation: anim-in 400ms ease-in;
-    }
-
-    .nav-logo-hidden {
-        display: flex;
-        flex: .000001;
-        animation: anim-out 400ms ease-out;
-    }
+@media(min-width: 1440px) {
 
     @keyframes anim-out {
         0% {
@@ -257,9 +29,67 @@ nav a:hover {
         }
     }
 
+    /***********/
+    /* General */
+    /***********/
+
     header {
-       display: grid; 
-       grid-template-columns: 1fr minmax(800px, 1fr) 1fr;
+        display: grid; 
+        grid-template-columns: 1fr minmax(800px, 1fr) 1fr;
+     }
+
+    h2, img, section {
+        padding: 0;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns:1fr repeat(12, 1fr) 1fr;
+        grid-row-gap: 0px;
+        grid-column-gap: 50px;
+        padding-top: 78px;
+    }
+
+    h2{
+        display: flex;
+        grid-column: 2/span 12;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    footer {
+        display: grid;
+        grid-gap: 30px;
+        width: 100%;
+        height: 30vh; 
+        grid-template-columns: auto auto;
+        grid-template-rows: repeat(5, 1fr);
+        background-color:  #f2f2f2;
+        text-align: center;
+        align-items: center;
+    }
+    
+    footer img {
+        grid-column: span 2;
+        grid-row: 2;
+    }
+    
+    footer p {
+        grid-column: span 2;
+        grid-row: 3;
+    }
+    
+    footer a {
+        grid-row: 4;
+    }
+
+    /**************/
+    /* Navigation */
+    /**************/
+    .menu {
+        display: none;
     }
 
     nav {
@@ -282,19 +112,6 @@ nav a:hover {
         transition: flex 400ms;
     }
 
-    nav a:hover {
-        cursor: pointer;
-        background-color: white;
-    }
-
-    .nav-scroll {
-        background-color: #f2f2f2;
-    }   
-
-    .nav-scroll a:hover {
-        background-color: #f2f2f2;  
-    }
-
     nav a::after {
         content: "";
         display: block;
@@ -306,9 +123,32 @@ nav a:hover {
         transition: transform ease-in-out 300ms;
     }
 
+    nav a:hover {
+        cursor: pointer;
+        background-color: white;
+    }
+
     nav a:hover::after {
         transform: scale(1,1);
     }
+
+    
+    .nav-logo {
+        display: flex;
+        flex: 1;
+        opacity: 1;
+        animation: anim-in 400ms ease-in;
+    }
+
+    .nav-logo-hidden {
+        display: flex;
+        flex: .000001;
+        animation: anim-out 400ms ease-out;
+    }
+
+    /*****************/
+    /* Contact Icons */
+    /*****************/
 
     .contact {
         position: relative;
@@ -318,7 +158,7 @@ nav a:hover {
         justify-content: center;
         align-content: center;
     }
-    
+
     .contact a {
         color: black;
     }
@@ -338,7 +178,6 @@ nav a:hover {
         right:0;
         top: 100%;
     }
-
     .phone-label {
         user-select: none;
         grid-column-start: 4;
@@ -380,27 +219,9 @@ nav a:hover {
         display: none;
     }
 
-
-    section {
-        display: grid;
-        grid-template-columns:1fr repeat(12, 1fr) 1fr;
-        grid-row-gap: 0px;
-        grid-column-gap: 50px;
-    }
-
-    h2{
-        display: flex;
-        grid-column: 2/span 12;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* .main-logo h1 {
-        font-size: 100px;
-    } */
-
+    /**********/
+    /* Praxis */
+    /**********/
     .praxis {
         align-items: start;
     }
@@ -417,6 +238,9 @@ nav a:hover {
         width: 100%;
     }
 
+    /*********/
+    /* Team */
+    /*********/
     .cards {
         grid-column: 2/span 12;
         display: grid;
@@ -431,25 +255,20 @@ nav a:hover {
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        /* transition: all 0.3s ease 0s; */
         position: relative;   
     }
-
-    /* .top {
-        grid-column: 2 / span 12;
-        display: flex;
-        width: 100%;
-        height: 100%;
-        justify-content: center; 
-        align-items: center;
-        background-color: var(--loehr-physio-geld);
-        background-size: 100% 100%;
+    
+    .card p {
+        position: absolute;
+        padding: 20px; 
+        opacity: 0;
+        text-align: center;
+        transition: all 0.3s ease 0s;
     }
 
-    .top h2 {
-        color: white;
-        font-size: 50px;
-    } */
+    /***************/
+    /* Anwendungen */
+    /***************/
 
     .anwendungen h2 {
         background-color: var(--loehr-physio-geld);
@@ -513,6 +332,11 @@ nav a:hover {
         grid-column: 8 / span 5;
     }
 
+
+    /***********/
+    /* Kontakt */
+    /***********/
+
     .map {
         grid-column: 2/ span 12;
         display: flex;
@@ -521,19 +345,9 @@ nav a:hover {
         /* background-color: var(--loehr-physio-geld); */
     }
 
-    /* .map .heading {
-        grid-column: 1/ span 14;
-        width: 100%; 
-        text-align: center;
-        background-color: var(--loehr-anthrazit);
-        color: white;
-    } */
-
     .map .karte{
-        /* grid-column: 2/ span 5; */
         width: 100%;
-        height: 100%;
-        
+        height: 100%;   
     }
     
     .karte iframe {
@@ -544,19 +358,13 @@ nav a:hover {
 
     .map .text {
         padding: 0 50px;
-        /* grid-column: 6/ span 12; */
         width: 100%;
         height: 100%;
-        /* background-color: var(--loehr-anthrazit); */
     }
 
-    /* .map .text p {
-        color: white;
-    } */
-
-    /* .map div {
-        /* padding-top: 50%; */
-    /* } */ 
+    /***************/
+    /* Datenschutz */
+    /***************/
 
     .datenschutz {  
         all: unset;
@@ -595,6 +403,5 @@ nav a:hover {
     .datenschutz p {
         padding-top: 1em;
     }
-
 
 }
