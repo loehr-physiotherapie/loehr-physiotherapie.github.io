@@ -265,7 +265,6 @@ nav a:hover {
         }
     }
 
-
     header {
        display: grid; 
        grid-template-columns: 1fr minmax(800px, 1fr) 1fr;
@@ -309,7 +308,7 @@ nav a:hover {
         display: block;
         height: 5px;
         background: var(--loehr-anthrazit);
-        position: absolut;
+        /* position: absolut; */
         transform: scale(0,1);
         transform-origin: left;
         transition: transform ease-in-out 300ms;
