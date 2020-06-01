@@ -241,6 +241,9 @@
     /*********/
     /* Team */
     /*********/
+    .team h2{
+        margin-bottom: 50px;
+    }
     .cards {
         grid-column: 2/span 12;
         display: grid;
@@ -257,7 +260,7 @@
         align-items: center;
         cursor: pointer;
         position: relative;   
-        /* height: 35vh; */
+        /* margin-top: 50px; */
     }
 
     .card img {
