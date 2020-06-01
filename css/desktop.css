@@ -348,12 +348,18 @@
         grid-column: 2 / span 12;
     }
 
-    .faq h4, p {
+    .faq h4, h6, p {
         grid-column: 2 / span 12;
         width: 100%;
     }
 
     .faq a {
+        padding-top: 50px;
+        grid-column: 2 / span 12;
+    }
+
+    .faq h2 {
+        padding: 50px;
         grid-column: 2 / span 12;
     }
 
