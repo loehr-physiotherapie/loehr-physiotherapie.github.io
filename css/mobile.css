@@ -244,11 +244,7 @@ footer a {
     text-align: center;
 }
 
-/* .card:hover img {
-    opacity: 25%;
-} */
-
-.card:active img {
+.card:hover img {
     opacity: 25%;
 }
 
@@ -259,14 +255,9 @@ footer a {
     opacity: 0;
 }
 
-/* .card:hover p {
-    opacity: 1; 
-} */
-
-.card:active p {
+.card:hover p {
     opacity: 1; 
 }
-
 
 /***************/
 /* Anwendungen */
