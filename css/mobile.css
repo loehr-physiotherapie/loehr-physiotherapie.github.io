@@ -334,7 +334,7 @@ footer a {
 /**************/
 .datenschutz {
     /* all:unset; */
-    /* display: block; */
+    display: inline-block;
     /* width: 100%; */
 }
 
