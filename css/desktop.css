@@ -332,6 +332,19 @@
         grid-column: 8 / span 5;
     }
 
+    .faq {
+        grid-column: 2 / span 12;
+    }
+
+    .faq h4, p {
+        grid-column: 2 / span 12;
+        width: 100%;
+    }
+
+    .faq a {
+        grid-column: 2 / span 12;
+    }
+
 
     /***********/
     /* Kontakt */
