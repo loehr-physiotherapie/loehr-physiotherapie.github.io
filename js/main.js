@@ -31,3 +31,7 @@ observer.observe(firstSection);
 $('.contact-check').on('change', function () {
     $('.contact-check').not(this).prop('checked', false);
 });
+
+$('nav a').on('click', function () {
+    $('.nav-toggle').prop("checked", false);
+});
