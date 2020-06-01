@@ -244,9 +244,10 @@
     .cards {
         grid-column: 2/span 12;
         display: grid;
-        /* height: 60vh; */
+        /* height: 120vh; */
         grid-template-columns: repeat(12, 1fr);
         grid-gap: 50px;
+        width: 100%;
     }
 
     .card {
@@ -256,6 +257,11 @@
         align-items: center;
         cursor: pointer;
         position: relative;   
+        /* height: 35vh; */
+    }
+
+    .card img {
+        height: 100%;
     }
     
     .card p {
