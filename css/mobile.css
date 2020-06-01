@@ -222,18 +222,26 @@ footer a {
 /*********/
 /* Cards */
 /*********/
+/* .team{
+    padding-left: unset;
+    padding-right: unset;
+    width: 100%;
+} */
+
+.cards {
+    width: 100%;
+}
 
 .card {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;   
+    position: relative;  
 }
 
 .card img {
     transition: all 0.3s ease 0s;
     text-align: center;
-    /* width: 100%;  */
 }
 
 .card:hover img {
@@ -255,8 +263,13 @@ footer a {
 /***************/
 /* Anwendungen */
 /***************/
+.anwendungen {
+    padding-left: 0px;
+    padding-right: 0px;
+}
 .anwendungen h2 {
     background-color: var(--loehr-physio-geld);
+    padding: 0;
 }
 .anwendungen div {
     display: flex;
