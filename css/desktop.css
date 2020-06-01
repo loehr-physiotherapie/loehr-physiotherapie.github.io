@@ -77,11 +77,13 @@
     }
     
     footer p {
+        margin: unset;
         grid-column: span 2;
         grid-row: 3;
     }
     
     footer a {
+        margin: unset;
         grid-row: 4;
     }
 

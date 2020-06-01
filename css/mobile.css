@@ -112,18 +112,13 @@ footer {
     align-items: center;
 }
 
-footer img {
-    grid-column: span 2;
-    grid-row: 2;
+
+footer a {
+    margin: 0 0 20px 0 ;
 }
 
 footer p {
-    grid-column: span 2;
-    grid-row: 3;
-}
-
-footer a {
-    grid-row: 4;
+    margin: 0 0 20px 0 ; 
 }
 
 
@@ -333,23 +328,19 @@ footer a {
 /* Datenschutz */
 /**************/
 .datenschutz {
-    /* all:unset; */
-    display: inline-block;
-    /* width: 100%; */
+    justify-items: start;
+    align-items: start;
 }
 
 .datenschutz * {
-    /* text-align: center; */
-    /* color: unset; */
+
     list-style-position: inside;
-    /* padding: 10px; */
 }   
 
 .datenschutz h1 {
-    /* color: black; */
+    width: unset;
     padding-bottom: 2em;
     padding-top: 2em;
-    text-align: unset;
 }
 
 .datenschutz h4 {
