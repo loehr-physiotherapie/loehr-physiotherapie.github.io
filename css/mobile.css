@@ -248,6 +248,10 @@ footer a {
     opacity: 25%;
 }
 
+.card:active img {
+    opacity: 25%;
+}
+
 .card p {
     transition: all 0.3s ease 0s;
     position: absolute;
@@ -256,6 +260,10 @@ footer a {
 }
 
 .card:hover p {
+    opacity: 1; 
+}
+
+.card:active p {
     opacity: 1; 
 }
 
