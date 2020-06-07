@@ -103,6 +103,7 @@ p {
 }
 
 footer {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -228,6 +229,9 @@ footer p {
 }
 
 .card {
+    height: 300px;
+    width: 100%;
+    
     display: flex;
     justify-content: center;
     align-items: center;
