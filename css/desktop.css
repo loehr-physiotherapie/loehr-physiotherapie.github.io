@@ -66,7 +66,7 @@
         height: 30vh; 
         grid-template-columns: auto auto;
         grid-template-rows: repeat(5, 1fr);
-        background-color:  #f2f2f2;
+        background-color: var(--loeht-heiler-blau);
         text-align: center;
         align-items: center;
     }
@@ -150,11 +150,11 @@
     }
 
     .nav-scroll {
-        background-color: #f2f2f2;
+        background-color: var(--loeht-heiler-blau);
     }   
 
     .nav-scroll a:hover {
-        background-color: #f2f2f2;  
+        background-color: var(--loeht-heiler-blau);;  
     }
 
     /*****************/
