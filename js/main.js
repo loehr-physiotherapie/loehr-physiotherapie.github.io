@@ -5,7 +5,7 @@ const navLogo = document.querySelector(".nav-logo");
 
 const config =
 {
-    // rootMargin: "-100000px 0px 0px 0px",
+    rootMargin: "-500px 0px 0px 0px",
     threshold: "0.5"
 };
 

@@ -114,20 +114,21 @@
         transition: flex 400ms;
     }
 
-    nav a::after {
+    /* nav a::after {
         content: "";
         display: block;
         height: 5px;
         background: var(--loehr-anthrazit);
-        /* position: absolut; */
         transform: scale(0,1);
         transform-origin: left;
         transition: transform ease-in-out 300ms;
-    }
+    } */
 
     nav a:hover {
         cursor: pointer;
         background-color: white;
+        /* color: var(--loehr-physio-geld); */
+        filter: opacity(50%);
     }
 
     nav a:hover::after {
@@ -146,6 +147,14 @@
         display: flex;
         flex: .000001;
         animation: anim-out 400ms ease-out;
+    }
+
+    .nav-scroll {
+        background-color: #f2f2f2;
+    }   
+
+    .nav-scroll a:hover {
+        background-color: #f2f2f2;  
     }
 
     /*****************/
