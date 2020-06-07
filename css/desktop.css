@@ -32,6 +32,9 @@
     /***********/
     /* General */
     /***********/
+    html, body {
+        overflow-x:hidden 
+    }
 
     header {
         display: grid; 
@@ -266,6 +269,8 @@
     }
 
     .card {
+        min-width: 300px;
+        min-height: 300px;
         grid-column-end: span 4;
         display: flex;
         justify-content: center;
