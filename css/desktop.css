@@ -71,7 +71,7 @@
         height: 30vh; 
         grid-template-columns: auto auto;
         grid-template-rows: repeat(5, 1fr);
-        background-color: var(--loeht-heiler-blau);
+        background-color: whitesmoke;
         text-align: center;
         align-items: center;
     }
