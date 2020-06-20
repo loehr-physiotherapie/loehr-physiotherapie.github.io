@@ -186,7 +186,7 @@ footer p {
 .main-logo .title {
     height: 30vh;
     margin: auto;
-    width: 15em;
+    width: 16vw;
 }
 
 .main-logo h1 {
@@ -195,7 +195,7 @@ footer p {
     height: unset;
     margin-left: -5px;
     padding-bottom: 0;
-    font-size: 7em;
+    font-size: 10vw;
     line-height: 0.8em;
 }
 
@@ -205,7 +205,7 @@ footer p {
     padding-top: 0;
     width: unset;
     height: unset;
-    font-size: 45px;
+    font-size: 3vw;
 }
 
 .main-logo .text {
