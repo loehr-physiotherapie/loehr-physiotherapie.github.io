@@ -283,6 +283,17 @@
         /* margin-top: 50px; */
     }
 
+    .empty_card {
+        min-width: 300px;
+        min-height: 300px;
+        grid-column-end: span 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;   
+    }
+
     .card img {
         height: 100%;
     }
