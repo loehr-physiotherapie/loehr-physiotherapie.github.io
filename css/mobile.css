@@ -164,7 +164,6 @@ footer p {
 } 
 
 
-
 /****************/
 /* Landing Page */
 /****************/
@@ -191,22 +190,26 @@ footer p {
 }
 
 .main-logo h1 {
+    display: inline-block;
     width: unset;
     height: unset;
     margin-left: -5px;
+    padding-bottom: 0;
     font-size: 150px;
     line-height: 0.8em;
 }
 
 .main-logo h2 {
     /* all:unset; */
+    display: inline-block;
+    padding-top: 0;
     width: unset;
     height: unset;
     font-size: 45px;
 }
 
 .main-logo .text {
-    display: block;
+    /* display: block; */
     text-align: center;
 }
 

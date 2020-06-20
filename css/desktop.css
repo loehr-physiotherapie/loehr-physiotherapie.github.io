@@ -159,7 +159,7 @@
     }   
 
     .nav-scroll a:hover {
-        opacity: 50%;
+        background-color: whitesmoke;
         /* background-color: var(--loeht-heiler-blau);;   */
     }
 
@@ -334,7 +334,8 @@
     }
 
     .physiotherapie {
-        /* min-height:60vh; */
+        padding-top: 100px;
+        min-width: 90vh;
         grid-column: 2 / span 12;
         grid-template-rows: auto auto auto auto;
         justify-items: center;
