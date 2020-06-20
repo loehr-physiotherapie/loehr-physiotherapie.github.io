@@ -37,6 +37,7 @@
     }
 
     header {
+        padding: 0;
         display: grid; 
         grid-template-columns: 1fr minmax(800px, 1fr) 1fr;
      }
