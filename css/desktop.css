@@ -32,6 +32,11 @@
     /***********/
     /* General */
     /***********/
+    body {
+        font-size: 21px;
+        width: 100%;
+    }
+
     html, body {
         overflow-x:hidden 
     }

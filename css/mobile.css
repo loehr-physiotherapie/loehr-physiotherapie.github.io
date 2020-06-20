@@ -34,7 +34,7 @@ html {
 }
 
 body {
-    font-size: 21px;
+    font-size: 16px;
     width: 100%;
 }
 
@@ -186,7 +186,7 @@ footer p {
 .main-logo .title {
     height: 30vh;
     margin: auto;
-    width: 16vw;
+    width: 15em;
 }
 
 .main-logo h1 {
@@ -195,7 +195,7 @@ footer p {
     height: unset;
     margin-left: -5px;
     padding-bottom: 0;
-    font-size: 10vw;
+    font-size: 8em;
     line-height: 0.8em;
 }
 
@@ -205,7 +205,7 @@ footer p {
     padding-top: 0;
     width: unset;
     height: unset;
-    font-size: 3vw;
+    font-size: 2.5em;
 }
 
 .main-logo .text {
