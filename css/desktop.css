@@ -155,11 +155,12 @@
     }
 
     .nav-scroll {
-        background-color: var(--loeht-heiler-blau);
+        background-color: whitesmoke/*var(--loeht-heiler-blau)*/;
     }   
 
     .nav-scroll a:hover {
-        background-color: var(--loeht-heiler-blau);;  
+        opacity: 50%;
+        /* background-color: var(--loeht-heiler-blau);;   */
     }
 
     /*****************/
