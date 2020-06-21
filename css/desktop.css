@@ -249,11 +249,59 @@
         align-items: start;
     }
 
-    .praxis img{
+    .praxis .image-slider{
+        position: relative;
         grid-column: 2/span 6;
         grid-row: 2;
         width: 100%;
     }
+
+    .praxis .image-slider img {
+        /* display: none; */
+    }
+
+    .praxis .image-slider .prev{
+        position: absolute;
+        cursor: pointer;
+        user-select: none;
+        top: 92%;
+        right: 92%;
+        color: var(--loehr-anthrazit);
+        font-size: 18px;
+        padding: 16px;
+        transition: 0.6s ease;
+      }
+
+    .praxis .image-slider .next {
+        position: absolute;
+        cursor: pointer;
+        user-select: none;
+        top: 92%;
+        left: 92%;
+        color: var(--loehr-anthrazit);
+        font-size: 18px;
+        padding: 16px;
+        transition: 0.6s ease;  
+    }
+
+    .prev:hover, .next:hover {
+        background-color: var(--loehr-physio-geld);
+      }
+
+    .praxis .image-slider .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: var(--loehr-anthrazit);
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .praxis .image-slider .active, .praxis .image-slider .dot:hover {
+        background-color: var(--loehr-physio-geld);
+      }
 
     .praxis p{
         grid-column: 8/span 6;
