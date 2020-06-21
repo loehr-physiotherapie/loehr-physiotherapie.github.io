@@ -5,7 +5,7 @@
 }
 
 /* @media(min-width: 1440px) { */
-@media(min-width: 800px) {
+@media(min-width: 1440px) {
 
     @keyframes anim-out {
         0% {
@@ -257,14 +257,14 @@
     }
 
     .praxis .image-slider img {
-        /* display: none; */
+        display: none;
     }
 
     .praxis .image-slider .prev{
         position: absolute;
         cursor: pointer;
         user-select: none;
-        top: 92%;
+        top: 82%;
         right: 92%;
         color: var(--loehr-anthrazit);
         font-size: 18px;
@@ -276,7 +276,7 @@
         position: absolute;
         cursor: pointer;
         user-select: none;
-        top: 92%;
+        top: 82%;
         left: 92%;
         color: var(--loehr-anthrazit);
         font-size: 18px;
@@ -287,6 +287,12 @@
     .prev:hover, .next:hover {
         background-color: var(--loehr-physio-geld);
       }
+
+    .praxis .image-slider .dots {
+        position: absolute;
+        left: 45%;
+        top: 87%;
+    }
 
     .praxis .image-slider .dot {
         cursor: pointer;
@@ -328,8 +334,8 @@
     .card {
         min-width: 300px;
         min-height: 300px;
-        height: 300px;
-        width: 100%;
+        height: auto;
+        width: auto;
         grid-column-end: span 4;
         display: flex;
         justify-content: center;
@@ -342,6 +348,7 @@
     .empty_card {
         min-width: 300px;
         min-height: 300px;
+        /* margin:20px; */
         grid-column-end: span 4;
         display: flex;
         justify-content: center;

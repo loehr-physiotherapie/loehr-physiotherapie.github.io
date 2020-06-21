@@ -3,7 +3,7 @@ const firstSection = document.querySelector(".firstSection");
 const mainLogo = document.querySelector(".main-logo");
 const navLogo = document.querySelector(".nav-logo");
 
-var window_width = window.matchMedia("(min-width: 800px)")
+var window_width = window.matchMedia("(min-width: 1440px)")
 if (window_width.matches) {
     const options =
     {
