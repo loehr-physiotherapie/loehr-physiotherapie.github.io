@@ -4,7 +4,8 @@
     --loeht-heiler-blau: #bed7e6;
 }
 
-@media(min-width: 1440px) {
+/* @media(min-width: 1440px) { */
+@media(min-width: 800px) {
 
     @keyframes anim-out {
         0% {
@@ -327,7 +328,8 @@
     /***************/
 
     .anwendungen h2 {
-        background-color: var(--loeht-heiler-blau);
+        background-image: url("../images/neu/Behandlung3.jpg");
+        background-repeat: no-repeat;
     }
 
 

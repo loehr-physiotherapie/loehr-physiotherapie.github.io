@@ -3,7 +3,7 @@ const firstSection = document.querySelector(".firstSection");
 const mainLogo = document.querySelector(".main-logo");
 const navLogo = document.querySelector(".nav-logo");
 
-var window_width = window.matchMedia("(min-width: 1440px)")
+var window_width = window.matchMedia("(min-width: 800px)")
 if (window_width.matches) {
     const options =
     {
@@ -12,12 +12,13 @@ if (window_width.matches) {
         threshold: [...Array(100).keys()].map(x => x / 100)
     };
     function callback(entries, observer) {
+        console.log(entries);
         const ratio = entries[0].intersectionRatio;
         const boundingRect = entries[0].boundingClientRect;
         const intersectionRect = entries[0].intersectionRect;
         // if (entries[0].isIntersecting) {
         // if (entries[0].intersectionRatio < 0.5) {
-        if (ratio < 1) {
+        if (ratio > 0.75) {
             if (boundingRect.top < intersectionRect.top) {
                 firstSection.style.opacity = 0.5;
                 navLogo.classList.add("nav-logo");
