@@ -383,8 +383,11 @@
     /***************/
 
     .anwendungen h2 {
-        background-image: url("../images/neu/Behandlung3.jpg");
+        /* color:; */
+        background-image: url("../images/neu/Behandlung11.jpg");
         background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
 
 

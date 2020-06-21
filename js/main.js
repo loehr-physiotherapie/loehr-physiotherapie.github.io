@@ -22,13 +22,13 @@ if (window_width.matches) {
                 firstSection.style.opacity = 0.5;
                 navLogo.classList.add("nav-logo");
                 navLogo.classList.remove("nav-logo-hidden");
-                header.classList.add("nav-scroll")
+                header.classList.add("nav-scroll");
             }
             else {
                 firstSection.style.opacity = 1;
                 navLogo.classList.add("nav-logo-hidden");
                 navLogo.classList.remove("nav-logo");
-                header.classList.remove("nav-scroll")
+                header.classList.remove("nav-scroll");
             }
         }
     }
