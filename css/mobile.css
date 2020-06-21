@@ -235,7 +235,7 @@ footer p {
     position: absolute;
     cursor: pointer;
     user-select: none;
-    top: 74%;
+    top: 45%;
     right: 92%;
     color: var(--loehr-anthrazit);
     font-size: 18px;
@@ -247,7 +247,7 @@ footer p {
     position: absolute;
     cursor: pointer;
     user-select: none;
-    top: 74%;
+    top: 45%;
     left: 92%;
     color: var(--loehr-anthrazit);
     font-size: 18px;
@@ -262,7 +262,7 @@ footer p {
 .praxis .image-slider .dots {
     position: absolute;
     left: 40%;
-    top: 79%;
+    top: 75%;
 }
 
 .praxis .image-slider .dot {
@@ -336,7 +336,7 @@ footer p {
     padding-right: 0px;
 }
 .anwendungen h2 {
-    background-image: url("../images/neu/panorama.jpg");
+    background-image: url("../images/neu/Behandlung3.jpg");
     /* background-repeat: no-repeat; */
     padding: 0;
 }
