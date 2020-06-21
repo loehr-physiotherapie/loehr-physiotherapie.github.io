@@ -15,10 +15,8 @@ if (window_width.matches) {
         const ratio = entries[0].intersectionRatio;
         const boundingRect = entries[0].boundingClientRect;
         const intersectionRect = entries[0].intersectionRect;
-        // if (entries[0].isIntersecting) {
-        // if (entries[0].intersectionRatio < 0.5) {
         if (ratio > 0.75) {
-            if (boundingRect.top < intersectionRect.top) {
+            if (boundingRect.top < intersectionRect.top - 10) {
                 firstSection.style.opacity = 0.5;
                 navLogo.classList.add("nav-logo");
                 navLogo.classList.remove("nav-logo-hidden");
@@ -81,7 +79,6 @@ function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("slides");
     var dots = document.getElementsByClassName("dot");
-    console.log(slides.length);
     if (n > slides.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = slides.length }
     for (i = 0; i < slides.length; i++) {
