@@ -15,6 +15,7 @@ if (window_width.matches) {
         const ratio = entries[0].intersectionRatio;
         const boundingRect = entries[0].boundingClientRect;
         const intersectionRect = entries[0].intersectionRect;
+        console.log(boundingRect.top);
         if (ratio > 0.75) {
             if (boundingRect.top < intersectionRect.top - 10) {
                 firstSection.style.opacity = 0.5;
