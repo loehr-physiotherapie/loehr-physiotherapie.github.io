@@ -242,6 +242,14 @@
         display: none;
     }
 
+
+    /**********/
+    /* Filler */
+    /**********/
+    .filler-image img {
+        grid-column: 1/span 14;
+    }
+
     /**********/
     /* Praxis */
     /**********/
