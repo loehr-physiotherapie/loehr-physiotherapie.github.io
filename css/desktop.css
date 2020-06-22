@@ -298,8 +298,8 @@
 
     .praxis .image-slider .dots {
         position: absolute;
-        left: 45%;
-        top: 90%;
+        left: calc(50% - 46.5px);
+        top: calc(100% - 50px);
     }
 
     .praxis .image-slider .dot {

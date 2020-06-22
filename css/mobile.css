@@ -217,6 +217,14 @@ footer p {
     margin-top: 20px;
 }
 
+/**********/
+/* Filler */
+/**********/
+.filler-image img {
+    padding: 0;
+    margin: 0;
+}
+
 /*********/
 /* Praxis */
 /*********/
@@ -235,7 +243,7 @@ footer p {
     position: absolute;
     cursor: pointer;
     user-select: none;
-    top: 45%;
+    top: calc(50% - 23.5px);
     right: 92%;
     color: var(--loehr-anthrazit);
     font-size: 18px;
@@ -247,7 +255,7 @@ footer p {
     position: absolute;
     cursor: pointer;
     user-select: none;
-    top: 45%;
+    top: calc(50% - 23.5px);
     left: 92%;
     color: var(--loehr-anthrazit);
     font-size: 18px;
@@ -261,8 +269,8 @@ footer p {
 
 .praxis .image-slider .dots {
     position: absolute;
-    left: 40%;
-    top: 75%;
+    left: calc(50% - 44.5px);
+    top: calc(100% - 100px);
 }
 
 .praxis .image-slider .dot {
