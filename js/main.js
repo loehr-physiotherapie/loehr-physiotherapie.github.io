@@ -44,17 +44,11 @@ $('nav a').on('click', function () {
     $('.nav-toggle').prop("checked", false);
 });
 
-
-// Image Slider
 var slideIndex = 1;
-// showSlides(slideIndex);
-// autoIncrement();
 window.addEventListener("load", function () {
     showSlides(slideIndex);
     myTimer = setInterval(function () { plusSlides(1) }, 5000);
 })
-
-// Next/previous controls
 function plusSlides(n) {
     clearInterval(myTimer);
     if (n < 0) {
@@ -68,14 +62,11 @@ function plusSlides(n) {
         myTimer = setInterval(function () { plusSlides(n + 1) }, 5000);
     }
 }
-
-// Thumbnail image controls
 function currentSlide(n) {
     clearInterval(myTimer);
     myTimer = setInterval(function () { plusSlides(n + 1) }, 5000);
     showSlides(slideIndex = n);
 }
-
 function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("slides");
