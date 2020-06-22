@@ -17,7 +17,7 @@ if (window_width.matches) {
         const intersectionRect = entries[0].intersectionRect;
         console.log(boundingRect.top);
         if (ratio > 0.75) {
-            if (boundingRect.top < intersectionRect.top - 10) {
+            if (boundingRect.top < intersectionRect.top - 100) {
                 firstSection.style.opacity = 0.5;
                 navLogo.classList.add("nav-logo");
                 navLogo.classList.remove("nav-logo-hidden");
