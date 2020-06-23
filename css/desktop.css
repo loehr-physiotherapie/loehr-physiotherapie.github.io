@@ -246,8 +246,16 @@
     /**********/
     /* Filler */
     /**********/
+    .filler-image {
+        min-height: unset;
+        padding: 0;
+        height: 60vh;
+    }
+
     .filler-image img {
+        /* height: 60vh; */
         grid-column: 1/span 14;
+
     }
 
     /**********/
@@ -299,7 +307,7 @@
     .praxis .image-slider .dots {
         position: absolute;
         left: calc(50% - 46.5px);
-        top: calc(100% - 50px);
+        top: calc(100% - 55px);
     }
 
     .praxis .image-slider .dot {
@@ -480,6 +488,9 @@
     /***********/
     /* Kontakt */
     /***********/
+    .kontakt {
+        padding: 0;
+    }
 
     .map {
         grid-column: 2/ span 12;
