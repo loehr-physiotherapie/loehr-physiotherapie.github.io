@@ -456,11 +456,11 @@
         grid-column: 3/span 5;
     }
 
-    .physiotherapie .content ul {
+    .physiotherapie .list ul {
         padding-left: 50px;
     }
 
-    .physiotherapie ul {
+    .physiotherapie .list {
         grid-row: 3;
         grid-column: 8 / span 5;
     }
