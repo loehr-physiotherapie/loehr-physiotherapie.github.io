@@ -246,6 +246,10 @@
     /**********/
     /* Filler */
     /**********/
+    .filler-image-mobile {
+        display: none;
+    }
+    
     .filler-image {
         min-height: unset;
         padding: 0;
