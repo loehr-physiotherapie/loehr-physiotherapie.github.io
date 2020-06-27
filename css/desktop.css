@@ -249,11 +249,12 @@
     .filler-image-mobile {
         display: none;
     }
-    
+
     .filler-image {
         min-height: unset;
-        padding: 0;
+        /* padding: 0; */
         height: 60vh;
+        display: block;
     }
 
     .filler-image img {
