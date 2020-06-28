@@ -171,7 +171,8 @@ footer p {
 
 .main-logo {
     padding-top: 100px;
-    min-height:  90vh;
+    /* min-height: 1000px; */
+    height:  90vh;
 }
 
 .main-logo img{
@@ -210,6 +211,7 @@ footer p {
 
 .main-logo .text {
     /* display: block; */
+    padding-top: 2.5%;
     text-align: center;
 }
 
