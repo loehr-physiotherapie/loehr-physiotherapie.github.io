@@ -1,0 +1,569 @@
+:root {
+    --loehr-anthrazit: #354b54;
+    --loehr-physio-geld: #fdd188;
+    --loeht-heiler-blau: #bed7e6;
+}
+
+/* @media(min-width: 1440px) { */
+@media(min-width: 1200px) {
+
+    @keyframes anim-out {
+        0% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(0);
+        } 
+    }
+
+
+    @keyframes anim-in {
+        0% {
+            opacity: 0;
+            transform: scale(0);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    /***********/
+    /* General */
+    /***********/
+    body {
+        font-size: 21px;
+        width: 100%;
+    }
+
+    html, body {
+        overflow-x:hidden 
+    }
+
+    header {
+        padding: 0;
+        display: grid; 
+        grid-template-columns: 1fr minmax(800px, 1fr) 1fr;
+     }
+
+    h2, img, section {
+        padding: 0;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns:1fr repeat(12, 1fr) 1fr;
+        grid-row-gap: 0px;
+        grid-column-gap: 50px;
+        padding-top: 78px;
+    }
+
+    h2{
+        display: flex;
+        grid-column: 2/span 12;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    footer {
+        margin-top: 50px;
+        display: grid;
+        grid-gap: 30px;
+        width: 100%;
+        height: 30vh; 
+        grid-template-columns: auto auto;
+        grid-template-rows: repeat(5, 1fr);
+        background-color: whitesmoke;
+        text-align: center;
+        align-items: center;
+    }
+    
+    footer img {
+        grid-column: span 2;
+        grid-row: 2;
+    }
+    
+    footer p {
+        margin: unset;
+        grid-column: span 2;
+        grid-row: 3;
+    }
+    
+    footer a {
+        margin: unset;
+        grid-row: 4;
+    }
+
+    /**************/
+    /* Navigation */
+    /**************/
+    .menu {
+        display: none;
+    }
+
+    nav {
+        all: unset;
+        grid-column: 2/3;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        overflow: hidden;
+        z-index: 999;
+    }
+
+    nav a {
+        all:unset;
+        color: var(--loehr-anthrazit);
+        opacity: 1;
+        flex:1;
+        overflow: hidden;
+        transition: flex 400ms;
+    }
+
+    /* nav a::after {
+        content: "";
+        display: block;
+        height: 5px;
+        background: var(--loehr-anthrazit);
+        transform: scale(0,1);
+        transform-origin: left;
+        transition: transform ease-in-out 300ms;
+    } */
+
+    nav a:hover {
+        cursor: pointer;
+        background-color: white;
+        /* color: var(--loehr-physio-geld); */
+        filter: opacity(50%);
+    }
+
+    nav a:hover::after {
+        transform: scale(1,1);
+    }
+
+    
+    .nav-logo {
+        display: flex;
+        flex: 1;
+        opacity: 1;
+        animation: anim-in 400ms ease-in;
+    }
+
+    .nav-logo-hidden {
+        display: flex;
+        flex: .000001;
+        animation: anim-out 400ms ease-out;
+    }
+
+    .nav-scroll {
+        background-color: whitesmoke/*var(--loeht-heiler-blau)*/;
+    }   
+
+    .nav-scroll a:hover {
+        background-color: whitesmoke;
+        /* background-color: var(--loeht-heiler-blau);;   */
+    }
+
+    /*****************/
+    /* Contact Icons */
+    /*****************/
+
+    .contact {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        /* grid-template-rows: auto; */
+        justify-content: center;
+        align-content: center;
+    }
+
+    .contact a {
+        color: black;
+    }
+
+    .contact label {
+        padding: 15px;
+    }
+
+    .contact label:hover {
+        cursor: pointer;
+        filter: opacity(50%);
+    }
+
+    .contact-content {
+        position: absolute;
+        left:0;
+        right:0;
+        top: 100%;
+    }
+    .phone-label {
+        user-select: none;
+        grid-column-start: 4;
+    }
+    .email-label {
+        user-select: none;
+    }
+
+    .phone-number {
+        display: none;
+    }
+
+    .email-address {
+        display: none;
+    }
+
+
+    .phone-toggle {
+        display: none;
+    }
+
+    .email-toggle {
+        display: none;
+    }
+
+    .phone-toggle:checked ~ .contact-content .phone-number {
+        display: block;
+    }
+
+    .phone-toggle:checked ~ .contact-content .email-address {
+        display: none;
+    }
+
+    .email-toggle:checked ~ .contact-content .email-address {
+        display: block;
+    }
+
+    .email-toggle:checked ~ .contact-content .phone-number {
+        display: none;
+    }
+
+
+    /**********/
+    /* Filler */
+    /**********/
+    .filler-image-mobile {
+        display: none;
+    }
+
+    .filler-image {
+        min-height: unset;
+        /* padding: 0; */
+        height: 60vh;
+        display: block;
+    }
+
+    .filler-image img {
+        /* height: 60vh; */
+        grid-column: 1/span 14;
+
+    }
+
+    /**********/
+    /* Praxis */
+    /**********/
+    .praxis {
+        align-items: start;
+    }
+
+    .praxis .image-slider{
+        position: relative;
+        grid-column: 2/span 6;
+        grid-row: 2;
+        width: 100%;
+    }
+
+    .praxis .image-slider img {
+        display: none;
+    }
+
+    .praxis .image-slider .prev{
+        position: absolute;
+        cursor: pointer;
+        user-select: none;
+        top: 45%;
+        right: 92%;
+        color: var(--loehr-anthrazit);
+        font-size: 18px;
+        padding: 16px;
+        transition: 0.6s ease;
+      }
+
+    .praxis .image-slider .next {
+        position: absolute;
+        cursor: pointer;
+        user-select: none;
+        top: 45%;
+        left: 92%;
+        color: var(--loehr-anthrazit);
+        font-size: 18px;
+        padding: 16px;
+        transition: 0.6s ease;  
+    }
+
+    .prev:hover, .next:hover {
+        background-color: var(--loehr-physio-geld);
+      }
+
+    .praxis .image-slider .dots {
+        position: absolute;
+        left: calc(50% - 46.5px);
+        top: calc(100% - 55px);
+    }
+
+    .praxis .image-slider .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: var(--loehr-anthrazit);
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .praxis .image-slider .active, .praxis .image-slider .dot:hover {
+        background-color: var(--loehr-physio-geld);
+      }
+
+    .praxis p{
+        grid-column: 8/span 6;
+        grid-row: 2;
+        width: 100%;
+    }
+
+    /*********/
+    /* Team */
+    /*********/
+    .team h2{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .cards {
+        grid-column: 2/span 12;
+        display: grid;
+        /* height: 120vh; */
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 50px;
+        width: 100%;
+    }
+
+    .card {
+        /* min-width: 300px;
+        min-height: 300px; */
+        height: 100%;
+        width: auto;
+        grid-column-end: span 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;   
+        /* margin-top: 50px; */
+    }
+
+    .empty_card {
+        /* min-width: 300px;
+        min-height: 300px; */
+        /* margin:20px; */
+        /* margin: 1% 0; */
+        width: 100%;
+        height: 100%;
+        grid-column-end: span 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;   
+    }
+
+    .card img {
+        height: 100%;
+    }
+
+    .card:hover img {
+        opacity: 25%;
+    }
+    
+    .card p {
+        position: absolute;
+        padding: 20px; 
+        opacity: 0;
+        text-align: center;
+        transition: all 0.3s ease 0s;
+    }
+
+    .card:hover p {
+        opacity: 1; 
+    }
+
+
+    /***************/
+    /* Anwendungen */
+    /***************/
+
+    .anwendungen h2 {
+        /* color:; */
+        background-image: url("../images/neu/Behandlung11.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+
+    .anwendungen div {
+        grid-column: 2/ span 12;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* grid-gap: 100px; */
+        text-align: center;
+        align-items: center;
+    }
+
+    .anwendungen div h3 {
+        color: white;
+    }
+
+    .anwendungen div a {
+        display: flex;
+        color: white;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--loehr-anthrazit);
+        /* border: solid 5px white; */
+    }
+
+    .anwendungen div a:hover {
+        opacity: 50%;
+    }
+
+    .physiotherapie {
+        padding-top: 100px;
+        min-width: 90vh;
+        grid-column: 2 / span 12;
+        grid-template-rows: auto auto auto auto;
+        justify-items: center;
+        align-items: start;
+        grid-gap: 0;
+    }
+
+    .physiotherapie h1{
+        grid-row: 2;
+        grid-column: 2 / span 12;
+    }
+
+    .physiotherapie .content {
+        grid-row: 3;
+        grid-column: 3/span 5;
+    }
+
+    .physiotherapie .list ul {
+        padding-left: 50px;
+    }
+
+    .physiotherapie .list {
+        grid-row: 3;
+        grid-column: 8 / span 5;
+    }
+
+    .faq {
+        grid-column: 2 / span 12;
+    }
+
+    .faq h4, h6, p {
+        grid-column: 2 / span 12;
+        width: 100%;
+    }
+
+    .faq a {
+        padding-top: 50px;
+        grid-column: 2 / span 12;
+    }
+
+    .faq h2 {
+        padding: 50px;
+        grid-column: 2 / span 12;
+    }
+
+
+    /***********/
+    /* Kontakt */
+    /***********/
+    .kontakt {
+        padding: 0;
+    }
+
+    .map {
+        padding-top: 50px;
+        grid-column: 2/ span 12;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .map .karte{
+        width: 100%;
+        height: 100%;  
+    }
+    
+    .karte iframe {
+        border: none;
+    }
+
+    .map .text {
+        padding: 0 50px;
+        width: 100%;
+        height: 100%;
+    }
+
+    /***************/
+    /* Datenschutz */
+    /***************/
+
+    .datenschutz {  
+        all: unset;
+        min-height:90vh;
+        display: block;
+        padding-top: 100px;
+        font-family: 'loehr-font', sans-serif;
+        font-size: 21px;
+        margin-left: 20%;
+        margin-right: 20%;
+        counter-reset: h4counter;
+        /* width: 100%; */
+    }
+
+    .datenschutz * {
+        color: unset;
+        list-style-position: inside;
+    }   
+
+    .datenschutz h1 {
+        /* color: black; */
+        padding-bottom: 2em;
+        padding-top: 2em;
+        text-align: center;
+    }
+
+    .datenschutz h4 {
+        padding-top: 3em;
+    }
+
+    .datenschutz h4:before {
+        content: counter(h4counter) ".\0000a0\0000a0";
+        counter-increment: h4counter;
+    }
+
+    .datenschutz p {
+        padding-top: 1em;
+    }
+
+}
