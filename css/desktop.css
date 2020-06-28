@@ -353,8 +353,8 @@
     }
 
     .card {
-        min-width: 300px;
-        min-height: 300px;
+        /* min-width: 300px;
+        min-height: 300px; */
         height: auto;
         width: auto;
         grid-column-end: span 4;
@@ -367,9 +367,10 @@
     }
 
     .empty_card {
-        min-width: 300px;
-        min-height: 300px;
+        /* min-width: 300px;
+        min-height: 300px; */
         /* margin:20px; */
+        /* margin: 1% 0; */
         grid-column-end: span 4;
         display: flex;
         justify-content: center;
