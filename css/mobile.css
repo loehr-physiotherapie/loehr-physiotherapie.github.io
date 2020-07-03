@@ -424,12 +424,12 @@ footer p {
 /* Datenschutz */
 /**************/
 .datenschutz {
+    all: unset;
     justify-items: start;
     align-items: start;
 }
 
 .datenschutz * {
-
     list-style-position: inside;
 }   
 
