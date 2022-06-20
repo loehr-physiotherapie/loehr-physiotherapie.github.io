@@ -531,13 +531,13 @@ nav a:hover {
 
     .map .karte{
         /* grid-column: 2/ span 5; */
-        width: 100%;
+        width: 80%;
         height: 100%;
         
     }
     
     .karte iframe {
-        width: 100%;
+        width: 80%;
         height: 42vh;
         border: none
     }
